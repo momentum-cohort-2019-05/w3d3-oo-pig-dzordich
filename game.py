@@ -37,14 +37,12 @@ def computer_round(player):
     keep_rolling = True
     round_score = 0
     while keep_rolling:
-        a = ""
-        if a == "":
-            roll_score = dice.roll()
-            if roll_score == 0:
-                round_score = 0
-                return round_score
-            if roll_score >= 5 or round_score > 12:
-                keep_rolling = False
+        roll_score = dice.roll()
+        if roll_score == 0:
+            round_score = 0
+            return round_score
+        if roll_score >= 5 or round_score > 12:
+            keep_rolling = False
     print(f"CPU's score that round: {round_score}")
     return round_score
 
